@@ -1,0 +1,60 @@
+﻿@model Web.Models.Votant
+@{
+    ViewData["Title"] = "Adauga Votant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Aceasta pagina este folosita pentru a adauga votanti.</p>
+
+@using (Html.BeginForm())
+{
+   // @Html.ValidationSummary(true, "Login failed. Check your login details.");
+    <div>
+        <fieldset>
+            <legend>Introduce Votanti</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Nume)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Nume)
+                @Html.ValidationMessageFor(u => u.Nume)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Prenume)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Prenume)
+                @Html.ValidationMessageFor(u => u.Prenume)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.CNP)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.CNP)
+                @Html.ValidationMessageFor(u => u.CNP)
+            </div><div class="editor-label">
+                @Html.LabelFor(u => u.Serie)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Serie)
+                @Html.ValidationMessageFor(u => u.Serie)
+            </div><div class="editor-label">
+                @Html.LabelFor(u => u.Judet)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Judet)
+                @Html.ValidationMessageFor(u => u.Judet)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Localitate)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Localitate)
+                @Html.ValidationMessageFor(u => u.Localitate)
+            </div>
+            <input type="submit" value="Adauga Votant" />
+        </fieldset>
+    </div>
+
+}

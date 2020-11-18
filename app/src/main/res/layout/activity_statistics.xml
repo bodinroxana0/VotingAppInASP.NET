@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StatisticsActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentTop="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_stat1"
+        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:background="@drawable/statistic_square"
+        android:layout_below="@+id/iv_icon"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+     <TextView
+         android:id="@+id/tv_s1"
+         android:layout_height="wrap_content"
+         android:layout_width="120dp"
+         android:text="Înscriși pe liste permanente"
+         android:textSize="12sp"
+         android:textColor="@color/colorText"
+         android:layout_below="@+id/iv_icon"
+         android:layout_marginTop="30dp"
+         android:layout_centerHorizontal="true"
+         android:textAlignment="center"
+         android:gravity="center"
+         />
+
+        <TextView
+            android:id="@+id/tv_inscrisi"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:layout_below="@+id/iv_icon"
+            android:layout_marginTop="66dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            />
+
+    <TextView
+        android:id="@+id/tv_stat2"
+        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:background="@drawable/statistic_square2"
+        android:layout_below="@+id/tv_stat1"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/tv_s2"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:text="Total votanți"
+            android:textSize="12sp"
+            android:textColor="@color/colorText"
+            android:layout_below="@+id/tv_stat1"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_voturi"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_stat1"
+            android:layout_marginTop="66dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            />
+
+    <TextView
+        android:id="@+id/tv_stat3"
+        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:background="@drawable/statistic_square"
+        android:layout_below="@+id/tv_stat2"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_centerHorizontal="true"
+        />
+
+        <TextView
+            android:id="@+id/tv_s3"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:text="Prezența la urne"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:layout_below="@+id/tv_stat2"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_prezenta"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:layout_below="@+id/tv_stat2"
+            android:layout_marginTop="66dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

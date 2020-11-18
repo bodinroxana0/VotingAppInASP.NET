@@ -1,0 +1,23 @@
+﻿@model Web.Models.Result
+@{
+    ViewData["Title"] = "Statistici Judet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Search failed.");
+    <div>
+        <fieldset>
+            <legend>Voturi pe judet</legend>
+            <div class="editor-label">
+                @Html.LabelFor(v => v.Judet)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(v => v.Judet)
+                @Html.ValidationMessageFor(v => v.Judet)
+            </div>
+            <input type="submit" value="Cauta" />
+        </fieldset>
+    </div>
+}
+@Html.Raw(ViewBag.HtmlStr)

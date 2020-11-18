@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnlineVoting</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Adauga
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Votant" asp-action="AddVotant">Adauga Votant</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Candidat" asp-action="AddCandidat">Adauga Candidat</a>
+                        </div>
+                        </div>
+                        <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Statistici
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Statistici" asp-action="Statistici">Statistici</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Statistici" asp-action="StatisticiJudet">Statistici pe judet</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Statistici" asp-action="Chart">Chart</a>
+                        </div>
+                        </div>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container" >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - OnlineVoting - Prezidentiale
+            <img src="https://lh3.googleusercontent.com/Y4NqFSGLfEjEzD6vIyKvsz9ZNdCMRNN7417ZNNuVUCcfJbhCsARYvqUYUKZftFYa5iBgTq_70GjJGfqv1XvgPe8yrXpXjpkAdsFP0qXcduz1faR9b2pGx6oP4SdvR0iptiJlegMtHNT5YL3iv7LBdqAr0drwrQ6ZRhgAPeZjPtoGp4Lp6kOBfHnSIXlLwSJk5alc_LRBOvkGV0ZmRjZOTPgtpqqddPLPQbcvSeP1BQCaERkhF2ihSClFQiC4BAnvoRpQxFJwnBEqKlVsBfDJM2rJ0SAUlG4p8pVgPdC5NDrrA-8GjoAALZexI3cI4MdBuYp-pzw92_ot3TPI0_8wUk7NM9SZ-hcBzEQI8L4Pw08AbM34giKtxR3GumKa4zZBBWitp8kw9Q4ZYXTarTSx5MJAaEYe65SgYQH2rS4kXkO2PLr8dVGfliV318PotsVNNRTkV56LwzORTDDyMszrj3s98jPaybZcgPL0LLwck8flQa2nMfGW4pEhgqYvTCV2bXT8pdU3BV2EBLXPy1KE1z8EeOEE1kxZe6bbrUL3VbIEykb4m9HLYAXWRbWyp-Cb42NnIL-CF3ouHqlHzDOZ3nEqB4PoPXELU89jo8teZIp-0qhtM74Dkke646d6OCu9bWMTa8mAz7MhsTk11dLTcoTIPeCtMw_AgIxfe4ki03pFZLSH2P5Udxa5=w408-h293-no" width="50" height="30">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

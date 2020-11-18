@@ -1,0 +1,70 @@
+@model List<RaportEntity>
+@{
+    ViewData["Title"] = "Chart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+.record{
+ float: left;
+ width: 100%;
+ border: 1px solid #ccc;
+ background-color: #f0f0f0;
+ margin-bottom: 2px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ }
+
+.bar {
+ background: transparent url(https://lh3.googleusercontent.com/Oh6P5o4FNvgFsGCVScFYnGEjPtm_zlV2RjdYpthdnMttxSX8CCxSowxTL1e3qAcM6JAcDOPp9rI_-sPJzgDgx8u85qrzgyNr30r-Y2acfNmlPy33mDhegkzkvYHzKpbmnEldJ3dNCJgwscSfSo2QpomP1qVtXRZUtHIm4nwIudRyF_y8LDdpbZChZScIK3jqg7NV3nJho4yxb_LUYQTIijAi5SlBhlxnwQ__ai-yg7-VS9X6TvL29l0TlDfnoU7jvMjYR8ev_J13_1ksHaVQDWz9IymhzOA7zptxZiCEBsDtubmMBCSPwyvg_kvggtGgqx33VSD2KkGQhruz-AuTQX3QwQ-7DxkUkqwKKrsPZfOI8Sp0rT1P6XNT4rC7fHJcjtxH7OWgHuRHruDmh_Z4TD7Y96ghr54ySQpgWDJSK-wW1jbK-DOGt99EMI98dMb2myF1iSsw4cOlNLvb2krDM9yQQv8XSZ3_rkvWCcRih_2U8a9vcxfRhRrrMqs2X2VgRWl_B3c-VdEcwxPHMvk-rL5dCtAGokyo0d9wdbogANEm9oN9Z_tYeAMIqxo5VUrQLwietP1zhXSLkvjPRcsBgAvUOUFh7jS_Wf2MqGjZsS_y4O2HIMNd6BF-gDTawVyiOz5ynPu7ErWHwUEI8ycHlH13luTENPayFQCqBdeJlussSigP8BBmTATe=w3-h30-no) repeat-x top left;
+ float: left;
+ clear: left;
+ height: 30px;
+ }
+
+.bar span{
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff;
+ float: left;
+ margin-left: 5px;
+ margin-top: 7px;
+ }
+
+.p{
+ padding-top: 3px;
+ float: right;
+ color: #6D8591;
+ clear: right;
+ font-size: 12px;
+ font-weight: bold;
+ height: 25px;
+ }
+
+.p span{
+ font-size: 12px;
+ font-weight: bold;
+ float: left;
+ margin-right: 5px;
+ margin-top: 5px;
+ }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>Reprezentarea rezultatelor in momentul actual sub forma de Chart Bar</p>
+<div class="container">
+    @foreach(var item in Model)
+    {                
+    <div class="record">
+        <div class="bar" style="width:@item.Procent";>
+            <span>@item.PartitionKey</span>
+        </div>
+        <div class="p">
+            <span>@item.Procent</span>
+        </div>
+    </div>
+    }
+</div>
+</body>
+</html>

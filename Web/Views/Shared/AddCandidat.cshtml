@@ -1,0 +1,41 @@
+﻿@model Web.Models.Candidat
+@{
+    ViewData["Title"] = "Adauga Candidat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Aceasta pagina este folosita pentru a adauga candidati.</p>
+
+@using (Html.BeginForm())
+{
+   // @Html.ValidationSummary(true, "Login failed. Check your login details.");
+    <div>
+        <fieldset>
+            <legend>Introduce Candidat</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Partid)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Partid)
+                @Html.ValidationMessageFor(u => u.Partid)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.NumePrenume)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.NumePrenume)
+                @Html.ValidationMessageFor(u => u.NumePrenume)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.PartidSigla)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.PartidSigla)
+                @Html.ValidationMessageFor(u => u.PartidSigla)
+            </div>
+            <input type="submit" value="Adauga Candidat" />
+        </fieldset>
+    </div>
+
+}

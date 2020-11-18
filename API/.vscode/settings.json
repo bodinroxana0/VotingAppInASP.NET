@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": ".publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/0bc1e68c-12f0-4840-804e-f19afbafc8a7/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/Alegeri"
+}

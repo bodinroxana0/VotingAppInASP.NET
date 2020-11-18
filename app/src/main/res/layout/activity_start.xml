@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:text="Autentificare"
+        android:textColor="@color/colorText"
+        android:textSize="26sp"
+        android:background="@drawable/border"
+        android:layout_marginTop="50dp"
+        android:onClick="SignIn"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_statistics"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_centerHorizontal="true"
+        android:text="Statistici"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:background="@drawable/border_blue"
+        android:layout_marginTop="20dp"
+        android:onClick="GoStatistics"
+        />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
